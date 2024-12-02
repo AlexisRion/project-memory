@@ -1,0 +1,24 @@
+#plateau {
+    border-style: double;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 15vw);
+    gap: 1vw;    
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.card.flipped {
+    background-color: #fff;
+}
