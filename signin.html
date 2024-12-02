@@ -18,10 +18,47 @@
         <span><a href="profile.html">Profil</a></span>
         <span><a href="play.html">Jouer</a></span>
     </div>
-    
+
     <div class="bloc-main">
-    
+
+        <form id="userForm" class="space-y-4">
+
+            <div>
+                Nom d'utilisateur
+                <input type="name" id="username">
+                <div id="nameError"></div>
+            </div>
+
+            <div>
+                Email
+                <input type="email" id="email">
+                <div id="emailError"></div>
+            </div>
+        
+            <div>
+                Mot de passe
+                <input type="password" id="password">
+                <div id="passwordError"></div>
+            </div>
+            
+            <div>
+                Confirmer le mot de passe
+                <input type="password" id="confirmPassword">
+                <div id="confirmPasswordError"></div>
+            </div>
+            <span>
+                <button type="submit">
+                    S'inscrire
+                </button>
+
+                <button type="reset">
+                    Annuler
+                </button>
+            </span>
+        </form>
+
     </div>
+
     <script type="module" src="../js/app.js"></script>
 </body>
 
