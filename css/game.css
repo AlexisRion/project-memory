@@ -1,3 +1,4 @@
+/*
 body {
     min-height: 100vh;
     min-width: 100vw;
@@ -16,17 +17,26 @@ p {
     font-size: 30px;
     font-weight: bold;
 }
+    */
+
+.bloc-main {
+    border-style: double;
+    background-color: green;
+    padding: 10px;
+    margin: 20px;
+}
 
 .actions {
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .actions button {
     padding: 8px 16px;
     font-size: 30px;
     border-radius: 10px;
-    background-color: #27ae60;
+    background-color: grey;
     color: white;
 }
 
