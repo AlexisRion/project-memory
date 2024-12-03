@@ -1,0 +1,26 @@
+[
+    {
+        "image": "./img/assets/memory-legume/1.svg",
+        "name": "apple"
+    },
+      {
+        "image": "./img/assets/memory-legume/2.svg",
+        "name": "banana"
+    },
+      {
+        "image": "./img/assets/memory-legume/3.svg",
+        "name": "broccoli"
+    },
+      {
+        "image": "./img/assets/memory-legume/4.svg",
+        "name": "cherry"
+    },
+      {
+        "image": "./img/assets/memory-legume/5.svg",
+        "name": "chili"
+    },
+      {
+        "image": "./img/assets/memory-legume/6.svg",
+        "name": "strawberry"
+    }
+]

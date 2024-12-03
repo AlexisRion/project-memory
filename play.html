@@ -22,23 +22,27 @@
     <div class="bloc-main">
         <div>
             <h2>Derniers meilleurs scores</h2>
-            <div id="scoreBoard"></div>
+            <div id="score-board"></div>
         </div>
         <div>
             <p>Tentez de gagner avec le moins d'éssais possible.</p>
             <p>Appuyez sur la <strong>barre d'espace</strong> pour relancer le jeu</p>
             <span>
                 <p>Nombre de coups : </p>
-                <p id="score"></p>
+                <p class="score"></p>
             </span>
         </div>
-        <div id="board">
+        <div class="grid-container">
             
+        </div>
+        <div class="actions">
+            <button onclick="restart()">Touche espace</button>
         </div>
     </div>
 
-    <script src="js/modules/game.js"></script>
-    <script type="module" src="../js/app.js"></script>
+    
+    <script type="module" src="./js/app.js"></script>
+    <script src="./js/modules/game.js"></script>
 </body>
 
 </html>
