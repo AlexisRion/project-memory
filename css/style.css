@@ -8,6 +8,12 @@ body {
     background-color: black;
 }
 
+.button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
 h1, h2 {
     place-self: center;
     color: white;
