@@ -3,6 +3,7 @@ let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
+let counterWin = 0;
 
 document.querySelector(".score").textContent = score;
 
@@ -71,7 +72,11 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
-
+  counterWin += 2;
+  console.log(counterWin);
+  if (counterWin === 12) {
+    win()
+  }
   resetBoard();
 }
 
@@ -93,6 +98,7 @@ function restart() {
   resetBoard();
   shuffleCards();
   score = 0;
+  counterWin = 0;
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();
@@ -101,6 +107,8 @@ function restart() {
 
 function win() {
   alert("bravo vous avez gagné en: " + score + " coups")
+  console.log("victoire");
+  
 }
 
 window.addEventListener("keyup",(event) => {
