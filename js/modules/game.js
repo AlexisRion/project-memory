@@ -27,7 +27,7 @@ fetch("./data/cards.json")
   }
 }
 
-  function generateCards() {
+function generateCards() {
   for (let card of cards) {
     const cardElement = document.createElement("div");
     cardElement.classList.add("card");
@@ -96,4 +96,29 @@ function restart() {
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();
+  console.log("refreshed");
 }
+
+function win() {
+  alert("bravo vous avez gagné en: " + score + " coups")
+}
+
+window.addEventListener("keyup",(event) => {
+    if (event.defaultPrevented) {
+      return; // Do nothing if the event was already processed
+    }
+
+    switch (event.code) {
+      case "Space":
+        restart()
+        console.log("refreshed by the spacebar");
+        break;
+      default:
+        return; // Quit when this doesn't handle the key event.
+    }
+
+    // Cancel the default action to avoid it being handled twice
+    event.preventDefault();
+  },
+  true,
+);
