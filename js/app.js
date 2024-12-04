@@ -61,6 +61,7 @@ function handleSubmit(event) {
     // Save Process
     saveToLocalStorage(formData);
     alert('Inscription réussie !');
+    window.location.replace("../project-memory/login.html")
     event.currentTarget.reset();
 }
 

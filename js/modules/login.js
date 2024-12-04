@@ -16,6 +16,7 @@ function checkUserLogin() {
         storedPw = element.password
          if(username.value === storedName && userPw.value === storedPw) {
         alert('You are loged in.');
+        window.location.replace("../project-memory/profile.html")
         }
     }
 }
