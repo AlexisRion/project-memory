@@ -66,3 +66,21 @@ export function passwordStrength() {
         }
     }
 }
+
+export function newUserCheck(username, email) {
+
+    let arr = [1, 2, 3];
+
+    localStorage.setItem("email", JSON.stringify(arr));
+    let mail = localStorage.getItem("email");
+
+    localStorage.setItem("username", JSON.stringify(arr));
+    let name = localStorage.getItem("username");
+
+    if (name === username) {
+        return false
+    }
+    if (mail === email) {
+        return false
+    }
+}

@@ -3,7 +3,8 @@ import {
     passwordValidator,
     confirmPasswordValidator,
     usernameValidator,
-    passwordStrength
+    passwordStrength,
+    newUserCheck
 } from './modules/validators.js';
 import { saveToLocalStorage } from './modules/storage.js';
 import { displayFieldError, clearFieldErrors } from './modules/errorDisplay.js';
@@ -44,6 +45,11 @@ function handleSubmit(event) {
     if (!confirmPasswordValidator(formData.confirmPassword, formData.password)) {
         displayFieldError('confirmPassword', "Le mot de passe doit être identique");
         hasError = true;
+    }
+
+    if (!newUserCheck(formData.username, formData.email)) {
+        displayFieldError('email', "Utilisateur déjà existant")
+        hasError = true
     }
 
     // Check Errors match
