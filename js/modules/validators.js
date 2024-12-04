@@ -68,15 +68,19 @@ export function passwordStrength() {
 }
 
 export function newUserCheck(username, email) {
+    const userData = JSON.parse(localStorage.getItem('userData'));
 
-    let mail = JSON.parse(localStorage.getItem("email"));
-
-    let name = JSON.parse(localStorage.getItem("username"));
-
-    if (name === username) {
-        return false
+    if (userData.length > 0) {
+        let storedName = userData[0].username
+        let storedEmail = userData[0].email
+        for (const element of userData) {
+            storedName = element.username
+            storedEmail = element.email
+            if(username === storedName && email === storedEmail) {
+                return true
+            }
+        }
+        return false  
     }
-    if (mail === email) {
-        return false
-    }
+    
 }

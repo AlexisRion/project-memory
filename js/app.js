@@ -46,12 +46,13 @@ function handleSubmit(event) {
         displayFieldError('confirmPassword', "Le mot de passe doit être identique");
         hasError = true;
     }
-/*
-    if (!newUserCheck(formData.username, formData.email)) {
+
+    if (newUserCheck(formData.username, formData.email)) {
+        displayFieldError('username', "Utilisateur déjà existant")
         displayFieldError('email', "Utilisateur déjà existant")
         hasError = true
     }
-*/
+
     // Check Errors match
     if (hasError) {
         return;
