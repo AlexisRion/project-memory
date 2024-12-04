@@ -30,7 +30,7 @@
             <div>
                 Nom d'utilisateur
                 <input type="name" id="username" placeholder="3 caractères minimum">
-                <div id="nameError"></div>
+                <div id="usernameError"></div>
             </div>
 
             <div>
@@ -42,6 +42,7 @@
             <div>
                 Mot de passe
                 <input type="password" id="password" placeholder="Votre mot de passe">
+                <progress max="100" value="0" id="meter"></progress>
                 <div id="passwordError"></div>
             </div>
             
@@ -63,7 +64,7 @@
 
     </div>
 
-    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="./js/app.js"></script>
 </body>
 
 </html>
