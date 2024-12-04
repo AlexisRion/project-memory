@@ -3,6 +3,7 @@ import {
     passwordValidator,
     confirmPasswordValidator,
     usernameValidator,
+    passwordStrength
 } from './modules/validators.js';
 import { saveToLocalStorage } from './modules/storage.js';
 import { displayFieldError, clearFieldErrors } from './modules/errorDisplay.js';
@@ -57,3 +58,4 @@ function handleSubmit(event) {
 }
 
 document.getElementById('userForm').addEventListener('submit', handleSubmit);
+document.getElementById('password').addEventListener('focus', passwordStrength)
