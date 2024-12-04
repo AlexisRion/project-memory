@@ -21,7 +21,7 @@ function handleSubmit(event) {
         password: document.getElementById('password').value,
         confirmPassword: document.getElementById('confirmPassword').value
     };
- 
+
     // Track Error
     let hasError = false;
 
