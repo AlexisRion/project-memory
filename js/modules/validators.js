@@ -23,6 +23,9 @@ export function passwordStrength() {
     let code = document.getElementById("password");
     let strengthbar = document.getElementById("meter");
 
+    code.addEventListener("focus", function() {
+    checkpassword(code.value);
+    });
     code.addEventListener("keyup", function() {
     checkpassword(code.value);
     });
