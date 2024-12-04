@@ -23,9 +23,6 @@ export function passwordStrength() {
     let code = document.getElementById("password");
     let strengthbar = document.getElementById("meter");
 
-    code.addEventListener("cut", function() {
-    checkpassword(code.value);
-    });
     code.addEventListener("keyup", function() {
     checkpassword(code.value);
     });
@@ -41,14 +38,10 @@ export function passwordStrength() {
         }
 
         if (password.length > 5) {
-            switch (strength) {
-            case 0:
-                strengthbar.value = 33;
-                break;
-
-            default:
+            if (strength === 0) {
+                 strengthbar.value = 33;
+            } else {
                 strengthbar.value = 66;
-                break;
             }
         }
 
