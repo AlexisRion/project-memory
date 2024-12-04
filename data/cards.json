@@ -1,26 +1,26 @@
 [
     {
-        "image": "./img/assets/memory-legume/1.svg",
-        "name": "apple"
+        "image": "./img/assets/batman/1966_batman.jpg",
+        "name": "1966"
     },
       {
-        "image": "./img/assets/memory-legume/2.svg",
-        "name": "banana"
+        "image": "./img/assets/batman/funny_batman.png",
+        "name": "funny"
     },
       {
-        "image": "./img/assets/memory-legume/3.svg",
-        "name": "broccoli"
+        "image": "./img/assets/batman/lego_batman.png",
+        "name": "lego"
     },
       {
-        "image": "./img/assets/memory-legume/4.svg",
-        "name": "cherry"
+        "image": "./img/assets/batman/surprised_batman.jpg",
+        "name": "surprised"
     },
       {
-        "image": "./img/assets/memory-legume/5.svg",
-        "name": "chili"
+        "image": "./img/assets/batman/trollface_batman.jpg",
+        "name": "trollface"
     },
       {
-        "image": "./img/assets/memory-legume/6.svg",
-        "name": "strawberry"
+        "image": "./img/assets/batman/vector_batman.png",
+        "name": "vector"
     }
 ]

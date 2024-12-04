@@ -76,8 +76,9 @@ span a {
 }
 
 .front-image {
-    width: 60px;
-    height: 60px;
+    width: 135px;
+    height: 135px;
+    border-radius: 8px;
 }
 
 .card.flipped {
