@@ -30,7 +30,6 @@ export function passwordStrength() {
     checkpassword(code.value);
     });
 
-
     function checkpassword(password) {
         let strength = 0;
         if (password.match(/[0-9]+/)) {
