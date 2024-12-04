@@ -1,17 +1,29 @@
-function check() {
+function checkUserLogin() {
 
     // stored data from the register-form
-    const storedName = localStorage.getItem('username');
-    const storedPw = localStorage.getItem('password');
+    const userData = JSON.parse(localStorage.getItem('userData'));
 
     // entered data from the login-form
     const username = document.getElementById('username');
     const userPw = document.getElementById('password');
 
     // check if stored data from register-form is equal to data from login form
-    if(username.value === storedName && userPw.value === storedPw) {
+    let storedName = userData[0].username
+    let storedPw = userData[0].password
+    
+    for (const element of userData) {
+        storedName = element.username
+        storedPw = element.password
+         if(username.value === storedName && userPw.value === storedPw) {
         alert('You are loged in.');
-    }else {
-        alert('ERROR.');
+        }
     }
 }
+
+function handleSubmit(event) {
+    event.preventDefault();
+
+    checkUserLogin()
+}
+
+document.getElementById('userForm').addEventListener('submit', handleSubmit);
