@@ -67,16 +67,32 @@ export function passwordStrength() {
     }
 }
 
-export function newUserCheck(username, email) {
+export function newUserCheckName(username) {
     const userData = JSON.parse(localStorage.getItem('userData'));
 
     if (userData.length > 0) {
-        let storedName = userData[0].username
-        let storedEmail = userData[0].email
+        let storedName
         for (const element of userData) {
             storedName = element.username
+            if(username === storedName) {
+                console.log("entered if username");
+                return true
+            }
+        }
+        return false  
+    }
+    
+}
+
+export function newUserCheckEmail(email) {
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    if (userData.length > 0) {
+        let storedEmail
+        for (const element of userData) {
             storedEmail = element.email
-            if(username === storedName && email === storedEmail) {
+            if(email === storedEmail) {
+                console.log("entered if email");
                 return true
             }
         }

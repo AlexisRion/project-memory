@@ -4,7 +4,8 @@ import {
     confirmPasswordValidator,
     usernameValidator,
     passwordStrength,
-    newUserCheck
+    newUserCheckEmail,
+    newUserCheckName
 } from './modules/validators.js';
 import { saveToLocalStorage } from './modules/storage.js';
 import { displayFieldError, clearFieldErrors } from './modules/errorDisplay.js';
@@ -47,8 +48,12 @@ function handleSubmit(event) {
         hasError = true;
     }
 
-    if (newUserCheck(formData.username, formData.email)) {
+    if (newUserCheckName(formData.username)) {
         displayFieldError('username', "Utilisateur déjà existant")
+        hasError = true
+    }
+
+    if (newUserCheckEmail(formData.email)) {
         displayFieldError('email', "Utilisateur déjà existant")
         hasError = true
     }
