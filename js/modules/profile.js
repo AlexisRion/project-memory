@@ -13,7 +13,7 @@ export function cardChoiceUser () {
         case "Batman":
             userCardChoice = "./data/cardsBatman.json"
             console.log(userCardChoice);
-             url("../img/assets/batman_logo.jpg")
+            url("../img/assets/batman_logo.jpg")
             break;
     
         case "PawPatrol":
@@ -26,5 +26,8 @@ export function cardChoiceUser () {
     }
     return userCardChoice
 }
+
+displayUsername()
+displayEmail()
 
 document.getElementById('cardChoice').addEventListener('change', cardChoiceUser);

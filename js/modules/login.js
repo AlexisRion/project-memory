@@ -15,6 +15,7 @@ function checkUserLogin() {
         storedName = element.username
         storedPw = element.password
         if(username.value === storedName && userPw.value === storedPw) {
+            //export const rightName = storedName
             alert('You are logged in.');
             window.location.replace("../project-memory/profile.html")
         }
