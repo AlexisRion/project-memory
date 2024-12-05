@@ -57,13 +57,13 @@ span a {
     display: grid;
     justify-content: center;
     grid-gap: 16px;
-    grid-template-columns: repeat(4, 140px);
-    grid-template-rows: repeat(2, 140px);
+    grid-template-columns: repeat(4, 16vw);
+    grid-template-rows: repeat(2, 16vw);
 }
 
 .card {
-    height:140px;
-    width: 140px;
+    height:16vw;
+    width: 16vw;
     border-radius: 10px;
     background-color: white;
     position: relative;
@@ -72,8 +72,8 @@ span a {
 }
 
 .front-image {
-    width: 135px;
-    height: 135px;
+    width: 15.5vw;
+    height: 15.5vw;
     border-radius: 8px;
 }
 
