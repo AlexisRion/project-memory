@@ -13,18 +13,29 @@ export function cardChoiceUser () {
         case "Batman":
             userCardChoice = "./data/cardsBatman.json"
             console.log(userCardChoice);
-            url("../img/assets/batman_logo.jpg")
+            playAudio(failSound)
+            //url("../img/assets/batman_logo.jpg")
             break;
     
         case "PawPatrol":
             userCardChoice = "./data/cardsPawPatrol.json"
             console.log(userCardChoice);
+             playAudio(failSound)
             break;
         default :
             userCardChoice = "./data/cardsBatman.json"
             break;
     }
     return userCardChoice
+}
+
+const failSound = document.getElementById('failSound');
+
+function playAudio(audio) {
+    audio.play();
+}
+function pauseAudio(audio) {
+  audio.pause();
 }
 
 displayUsername()

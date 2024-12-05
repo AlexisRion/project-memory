@@ -8,8 +8,6 @@ let score = 0;
 let counterWin = 0;
 //const cardChoice = cardChoiceUser
 //console.log(cardChoice);
-//new Audio('./project-memory/img/ressources/flipcard-91468.mp3').play()
-
 const flipCardSound = document.getElementById("flipCardSound");
 const winSound = document.getElementById("winSound");
 const shuffleCardsSound = document.getElementById("shuffleCardsSound");
@@ -20,6 +18,7 @@ function playAudio(audio) {
 function pauseAudio(audio) {
   audio.pause();
 }
+
 document.querySelector(".score").textContent = score;
 
 fetch("./data/cardsBatman.json")
