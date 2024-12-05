@@ -14,9 +14,10 @@ function checkUserLogin() {
     for (const element of userData) {
         storedName = element.username
         storedPw = element.password
-         if(username.value === storedName && userPw.value === storedPw) {
-        alert('You are logged in.');
-        window.location.replace("../project-memory/profile.html")
+        if(username.value === storedName && userPw.value === storedPw) {
+            console.log(rightName);
+            alert('You are logged in.');
+            window.location.replace("../project-memory/profile.html")
         }
     }
 }

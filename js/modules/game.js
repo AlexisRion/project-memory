@@ -1,9 +1,14 @@
+//import { cardChoiceUser } from './profile.js';
+
 const gridContainer = document.querySelector(".grid-container");
 let cards = [];
 let firstCard, secondCard;
 let lockBoard = false;
 let score = 0;
 let counterWin = 0;
+//const cardChoice = cardChoiceUser
+//console.log(cardChoice);
+
 
 document.querySelector(".score").textContent = score;
 
