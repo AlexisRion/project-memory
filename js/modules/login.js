@@ -9,13 +9,12 @@ function checkUserLogin() {
 
     // check if stored data from register-form is equal to data from login form
     let storedName = userData[0].username
-    let storedPw = userData[0].password
+    let storedPw 
     
     for (const element of userData) {
         storedName = element.username
         storedPw = element.password
         if(username.value === storedName && userPw.value === storedPw) {
-            console.log(rightName);
             alert('You are logged in.');
             window.location.replace("../project-memory/profile.html")
         }

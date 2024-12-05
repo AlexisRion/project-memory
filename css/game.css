@@ -39,10 +39,6 @@ span a {
     place-self: center;
 }
 
-.bloc-main div {
-    place-self: center;
-}
-
 .actions {
     display: flex;
     justify-content: center;
