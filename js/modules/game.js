@@ -12,11 +12,12 @@ let counterWin = 0;
 const flipCardSound = document.getElementById("flipCardSound");
 const winSound = document.getElementById("winSound");
 const shuffleCardsSound = document.getElementById("shuffleCardsSound");
+const tadaSound = document.getElementById("tadaSound");
 
 
 document.querySelector(".score").textContent = score;
 
-fetch("./data/cardsBatman.json")
+fetch("./data/cardsPawPatrol.json")
   .then((res) => res.json())
   .then((data) => {
     cards = [...data, ...data];
@@ -86,6 +87,7 @@ function disableCards() {
   counterWin += 2;
   console.log(counterWin);
   if (counterWin === 12) {
+    playAudio(tadaSound)
     win()
   }
   resetBoard();
