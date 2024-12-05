@@ -10,12 +10,16 @@ let counterWin = 0;
 //console.log(cardChoice);
 //new Audio('./project-memory/img/ressources/flipcard-91468.mp3').play()
 
-const flipCardSound = document.getElementById("myAudio");
+const flipCardSound = document.getElementById("flipCardSound");
+const winSound = document.getElementById("winSound");
+const shuffleCardsSound = document.getElementById("shuffleCardsSound");
 
-function playAudio() {
-    flipCardSound.play();
+function playAudio(audio) {
+    audio.play();
 }
-
+function pauseAudio(audio) {
+  audio.pause();
+}
 document.querySelector(".score").textContent = score;
 
 fetch("./data/cardsBatman.json")
@@ -60,8 +64,7 @@ function flipCard() {
   if (this === firstCard) return;
 
   this.classList.add("flipped");
-  playAudio()
-  
+  playAudio(flipCardSound)
 
   if (!firstCard) {
     firstCard = this;
@@ -85,6 +88,7 @@ function checkForMatch() {
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
+  playAudio(winSound)
   counterWin += 2;
   console.log(counterWin);
   if (counterWin === 12) {
@@ -108,6 +112,7 @@ function resetBoard() {
 }
 
 function restart() {
+  playAudio(shuffleCardsSound)
   resetBoard();
   shuffleCards();
   score = 0;
