@@ -1,3 +1,4 @@
+import { playAudio } from "./soundPlayer.js";
 
 function displayUsername() {
     document.getElementById('username').innerHTML = "USER";
@@ -30,13 +31,6 @@ export function cardChoiceUser () {
 }
 
 const failSound = document.getElementById('failSound');
-
-function playAudio(audio) {
-    audio.play();
-}
-function pauseAudio(audio) {
-  audio.pause();
-}
 
 displayUsername()
 displayEmail()

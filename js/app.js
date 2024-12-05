@@ -9,7 +9,7 @@ import {
 } from './modules/validators.js';
 import { saveToLocalStorage } from './modules/storage.js';
 import { displayFieldError, clearFieldErrors } from './modules/errorDisplay.js';
-
+import { playAudio } from "./modules/soundPlayer.js";
 function handleSubmit(event) {
     event.preventDefault();
     // Remove Old Errors
@@ -60,6 +60,7 @@ function handleSubmit(event) {
 
     // Check Errors match
     if (hasError) {
+        playAudio(errorSound)
         return;
     }
 

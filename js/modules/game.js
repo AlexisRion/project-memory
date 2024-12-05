@@ -1,4 +1,5 @@
 //import { cardChoiceUser } from './profile.js';
+import { playAudio } from "./soundPlayer.js";
 
 const gridContainer = document.querySelector(".grid-container");
 let cards = [];
@@ -12,12 +13,6 @@ const flipCardSound = document.getElementById("flipCardSound");
 const winSound = document.getElementById("winSound");
 const shuffleCardsSound = document.getElementById("shuffleCardsSound");
 
-function playAudio(audio) {
-    audio.play();
-}
-function pauseAudio(audio) {
-  audio.pause();
-}
 
 document.querySelector(".score").textContent = score;
 

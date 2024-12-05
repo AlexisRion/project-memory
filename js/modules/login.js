@@ -1,3 +1,7 @@
+import { playAudio } from "./soundPlayer.js";
+
+const errorSound = document.getElementById('errorSound');
+
 function checkUserLogin() {
 
     // stored data from the register-form
@@ -18,6 +22,8 @@ function checkUserLogin() {
             //export const rightName = storedName
             alert('You are logged in.');
             window.location.replace("../project-memory/profile.html")
+        }   else {
+            playAudio(errorSound)
         }
     }
 }
