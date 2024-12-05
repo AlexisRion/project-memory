@@ -1,0 +1,26 @@
+[
+    {
+        "image": "./img/assets/pawPatrol/chase.png",
+        "name": "chase"
+    },
+      {
+        "image": "./img/assets/pawPatrol/marcus.png",
+        "name": "marcus"
+    },
+      {
+        "image": "./img/assets/pawPatrol/stella.png",
+        "name": "stella"
+    },
+      {
+        "image": "./img/assets/pawPatrol/ruben.png",
+        "name": "ruben"
+    },
+      {
+        "image": "./img/assets/pawPatrol/rocky.png",
+        "name": "rocky"
+    },
+      {
+        "image": "./img/assets/pawPatrol/zuma.png",
+        "name": "zuma"
+    }
+]

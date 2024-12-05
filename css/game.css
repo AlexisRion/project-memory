@@ -103,7 +103,7 @@ span a {
 }
 
 .card .back {
-    background-image: url("../img/assets/ecran_accueil_batman.png");
+    background-image: url("../img/assets/batman_logo.jpg");
     background-position: center center;
     background-size: cover;
     backface-visibility: hidden;
