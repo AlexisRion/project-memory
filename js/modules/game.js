@@ -116,6 +116,8 @@ function win() {
   
 }
 
+document.getElementById('reset').addEventListener("click", restart)
+
 window.addEventListener("keyup",(event) => {
   switch (event.code) {
     case "Space":
