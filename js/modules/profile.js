@@ -13,14 +13,14 @@ export function cardChoiceUser () {
     switch (cardChoice.value) {
         case "Batman":
             userCardChoice = "./data/cardsBatman.json"
-            console.log(userCardChoice);
+            console.log(userCardChoice, " ne marche pas non plus");
             playAudio(failSound)
             //url("../img/assets/batman_logo.jpg")
             break;
     
         case "PawPatrol":
             userCardChoice = "./data/cardsPawPatrol.json"
-            console.log(userCardChoice);
+            console.log(userCardChoice, " ne marche pas");
              playAudio(failSound)
             break;
         default :
