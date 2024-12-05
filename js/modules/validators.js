@@ -70,7 +70,7 @@ export function passwordStrength() {
 export function newUserCheckName(username) {
     const userData = JSON.parse(localStorage.getItem('userData'));
 
-    if (userData.length > 0) {
+    if (localStorage.length > 0) {
         let storedName
         for (const element of userData) {
             storedName = element.username
@@ -87,7 +87,7 @@ export function newUserCheckName(username) {
 export function newUserCheckEmail(email) {
     const userData = JSON.parse(localStorage.getItem('userData'));
 
-    if (userData.length > 0) {
+    if (localStorage.length > 0) {
         let storedEmail
         for (const element of userData) {
             storedEmail = element.email
