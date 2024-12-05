@@ -8,7 +8,13 @@ let score = 0;
 let counterWin = 0;
 //const cardChoice = cardChoiceUser
 //console.log(cardChoice);
+//new Audio('./project-memory/img/ressources/flipcard-91468.mp3').play()
 
+const flipCardSound = document.getElementById("myAudio");
+
+function playAudio() {
+    flipCardSound.play();
+}
 
 document.querySelector(".score").textContent = score;
 
@@ -54,6 +60,8 @@ function flipCard() {
   if (this === firstCard) return;
 
   this.classList.add("flipped");
+  playAudio()
+  
 
   if (!firstCard) {
     firstCard = this;
