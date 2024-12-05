@@ -122,8 +122,11 @@ window.addEventListener("keyup",(event) => {
       restart()
       console.log("refreshed by the spacebar");
       break;
+    case "ArrowUp":
+      console.log("easter-egg: https://www.youtube.com/watch?v=xvFZjo5PgG0");
+      break;
     default:
-      return; // Quit when this doesn't handle the key event.
+      return;
   }
 },
 true);
